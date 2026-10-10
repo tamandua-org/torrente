@@ -1,0 +1,15 @@
+[package]
+name = "torrent-client"
+description = "Tokio command-line application for the Torrente learning client"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+tokio.workspace = true
+torrent-core = { path = "../torrent-core" }
+
+[lints]
+workspace = true

@@ -1,0 +1,25 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/torrent-core",
+    "crates/torrent-client",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+license = "MIT OR Apache-2.0"
+authors = []
+
+[workspace.dependencies]
+anyhow = "1.0"
+thiserror = "2.0"
+tokio = { version = "1.44", features = ["macros", "rt-multi-thread", "net", "io-util", "sync", "time"] }
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+
+[workspace.lints.clippy]
+all = "warn"
+pedantic = "warn"
